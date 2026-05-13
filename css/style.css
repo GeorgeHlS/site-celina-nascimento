@@ -365,13 +365,13 @@ body {
     align-items: center;
 }
 
-.sobre-foto {
+.sobre-img {
     width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
     aspect-ratio: 3/4;
     object-fit: cover;
     object-position: center top;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow-lg);
 }
 
 .sobre-text {
