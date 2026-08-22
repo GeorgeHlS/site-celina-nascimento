@@ -80,4 +80,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // === Depoimentos Slider ===
+    const depoimentosGrid = document.getElementById('depoimentosGrid');
+    const depoimentosPrev = document.getElementById('depoimentosPrev');
+    const depoimentosNext = document.getElementById('depoimentosNext');
+
+    if (depoimentosGrid && depoimentosPrev && depoimentosNext) {
+        depoimentosPrev.addEventListener('click', () => {
+            const scrollAmount = depoimentosGrid.offsetWidth > 400 ? 344 : 304; // Card width + gap
+            depoimentosGrid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+
+        depoimentosNext.addEventListener('click', () => {
+            const scrollAmount = depoimentosGrid.offsetWidth > 400 ? 344 : 304; // Card width + gap
+            depoimentosGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+    }
+
 });
