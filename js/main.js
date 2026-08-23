@@ -97,4 +97,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // === WhatsApp Conversion Tracking ===
+    document.querySelectorAll('a[href*="wa.me"]').forEach(button => {
+        button.addEventListener('click', () => {
+            if (typeof gtag === 'function') {
+                gtag('event', 'click_whatsapp', {
+                    'event_category': 'contato',
+                    'event_label': 'botao_whatsapp',
+                    'value': 1
+                });
+            }
+        });
+    });
+
 });
